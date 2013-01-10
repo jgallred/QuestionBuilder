@@ -1,0 +1,13 @@
+{{! View = views/exam/questions/preview/openResponse, Model = models/exam/questions/openResponse }}
+<div class="question-text-container">
+    <label class="question-text" style="display:inline">{{{question}}}</label>
+    <span class="question-points" style="display:inline">{{totalPoints}}</span>
+</div>
+<div class="question-longtext-box">
+    <div class="longtext-box-placeholder">
+        Open Response<span class="open-response-lines">{{boxHeight}} lines</span>
+    </div>
+</div>
+{{#if responseWordLength}}
+<div class="longtext-max-words">Response limited to {{responseWordLength}} words.</div>
+{{/if}}

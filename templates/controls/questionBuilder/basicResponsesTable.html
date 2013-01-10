@@ -1,0 +1,25 @@
+{{! View=views/controls/questionBuilder/responses/basicResponsesTable}}
+<thead>
+<tr>
+    {{#each_with_key headers}}
+    <th {{#if className}}class="{{className}}"{{/if}}>
+        <label>{{name}}{{#if subtext}}<br/>({{subtext}}){{/if}}{{#if helpId}}{{{helpIcon helpId appendSuffix=true}}}{{/if}}</label>
+    </th>
+    {{/each_with_key}}
+</tr>
+</thead>
+<tbody>
+    {{#if canAdd}}
+    <tr class="new" style="display: table-row; ">
+        <td class="bubble"></td>
+        <td class="bAdd-new">Add new</td>
+        <td class="inactive"></td>
+        <td class="inactive"></td>
+    </tr>
+    {{/if}}
+    <tr class="totalPoints">
+        <td colspan="2" style="text-align: right"><b>Points Possible:</b></td>
+        <td><label style="font-weight:bold">0</label></td>
+        <td></td>
+    </tr>
+</tbody>

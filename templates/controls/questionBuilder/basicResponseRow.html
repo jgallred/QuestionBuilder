@@ -1,0 +1,23 @@
+{{! View=views/controls/questionBuilder/responses/basicResponseRow, Model=views/controls/questionBuilder/viewModel/responses/basicResponse}}
+<td class="bubble">
+    <span class="question-choices">
+        <input type="{{#if multipleCorrect}}checkbox{{else}}radio{{/if}}"  
+               {{#unless multipleCorrect}}name="{{model.name}}_correctAnswer"{{/unless}} 
+               value="{{model.symbol}}">
+        <label>{{model.symbol}}</label>
+    </span>
+</td>
+<td class="option">
+    <div contenteditable="true" class="longtextEditableDiv responseText">{{model.text}}</div>
+</td>
+<td class="points">
+    <input type="number" class="points-incrementor" value="{{model.points}}" size="3" step="any"> 
+</td>
+<td class="feedback">
+    <div contenteditable="true" class="longtextEditableDiv responseFeedback">{{model.feedback}}</div>
+</td>
+{{#if canDelete}}
+<td class="delete">
+    <a href="#" class="quicktip deleteAnswer" title="Delete">X</a>
+</td>
+{{/if}}

@@ -1,0 +1,15 @@
+{{! View = views/exam/questions/preview/mulitpleAnswer, Model = models/exam/questions/mulitpleAnswer }}
+<div class="question-text-container">
+    <label class="question-text">{{{question}}}{{#if promptForNumberOfAnswers}}(Choose {{promptForNumberOfAnswers}}){{/if}}</label>
+</div>
+{{#each_with_key choices}}
+<div class="form question-response">
+    <span>
+        <input name="ma_{{../id}}" id="ma_{{../id}}_{{value}}" value="{{value}}" type="checkbox" {{#if correct}}checked{{/if}}>
+        <label for="ma_{{../id}}_{{value}}" id="ma_{{../id}}_{{value}}_label">{{{text}}}</label>
+        {{#if points}}
+        <span class="question-points">{{points}}</span>
+        {{/if}}
+    </span>
+</div>
+{{/each_with_key}}

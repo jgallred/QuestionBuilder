@@ -1,0 +1,31 @@
+{{! View=views/controls/questionBuilder/dialog, Model=views/controls/questionBuilder/viewModel/question }}
+<section id="question" class="fixed">
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="questionType">Type</label></td>
+                <td>
+                    <select name="questionType" id="questionType">
+                        <option value="multiple-choice">Multiple Choice</option>
+                        <option value="fill-in-the-blank">Fill in the Blank</option>
+                        <option value="matching">Matching</option>
+                        <option value="multiple-answer">Multiple Answer</option>
+                        <option value="open-response">Open Response</option>
+                        <option value="true-false">True/False</option>
+                    </select>
+                    {{{helpIcon "question_select_label" appendSuffix=true}}}
+                </td>
+            </tr>
+            <tr>
+                <td class="longTextLabel"><label id="questionText_label" for="questionText">Question Text</label></td>
+                <td><div id="questionText" contenteditable="true" class="longtextEditableDiv">{{{question}}}</div></td>  
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section id="response" class="fixed">
+    
+</section>
+<section id="questionProperties" class="fixed">
+    
+</section>

@@ -1,0 +1,20 @@
+{{! View = views/exam/questions/preview/question, Model = models/exam/questions/question }}
+<td class="order"></td>
+<td class="content">
+    {{! QuestionPreview subtypes can use this space}}
+    
+    {{#if explainYourAnswer}}
+    <div class="question-longtext-box-container">
+        <div class="longtext-box-label">Explain your answer:</div>
+        <div class="question-longtext-box">
+            <div class="longtext-box-placeholder">Response Explanation</div>            
+        </div>
+    </div>
+    {{/if}}
+</td>
+<td class="actions">
+    <div class="value">{{totalPoints}} pts</div>
+    <a class="question-action edit-question" title="Edit">Edit</a>
+    <a class="question-action remove-question" title="Delete">Delete</a>
+    <a class="question-action copy-question" title="Copy">Copy</a>
+</td>

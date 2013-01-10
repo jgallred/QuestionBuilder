@@ -1,0 +1,15 @@
+{{! View = views/exam/questions/preview/trueFalse, Model = models/exam/questions/trueFalse }}
+<div class="question-text-container">
+    <label class="question-text">{{{question}}}</label>
+</div>
+{{#each_with_key choices}}
+<div class="form question-response">
+    <span>
+        <input name="tf_{{../id}}" id="tf_{{../id}}_{{value}}" value="{{value}}" type="radio" {{#if correct}}checked{{/if}}>
+        <label for="tf_{{../id}}_{{value}}" id="tf_{{../id}}_{{value}}_label">{{{text}}}</label>
+        {{#if points}}
+        <span class="question-points">{{points}}</span>
+        {{/if}}
+    </span>
+</div>
+{{/each_with_key}}

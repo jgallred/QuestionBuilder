@@ -1,0 +1,15 @@
+{{! View = views/exam/questions/preview/mulitpleChoice, Model = models/exam/questions/mulitpleChoice }}
+<div class="question-text-container">
+    <label class="question-text">{{{question}}}</label>
+</div>
+{{#each_with_key choices}}
+<div class="form question-response">
+    <span>
+        <input name="mc_{{../id}}" id="mc_{{../id}}_{{value}}" value="{{value}}" type="radio" {{#if correct}}checked{{/if}}>
+        <label for="mc_{{../id}}_{{value}}" id="mc_{{../id}}_{{value}}_label">{{{text}}}</label>
+        {{#if points}}
+        <span class="question-points">{{points}}</span>
+        {{/if}}
+    </span>
+</div>
+{{/each_with_key}}

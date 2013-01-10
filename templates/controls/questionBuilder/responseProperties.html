@@ -1,0 +1,9 @@
+{{! View=views/controlls/questionBuilder/answers/answer}}
+{{#each properties}}
+    {{#if render}}
+        <div class="inlineLabel">
+            <input type="checkbox" id="{{id}}" class="{{attrName}}" {{#if modelValue}}checked{{/if}}>
+            <label id="{{id}}" for="{{id}}">{{{label}}}{{{helpIcon id appendSuffix=true}}}</label>
+        </div>
+    {{/if}}
+{{/each}}
